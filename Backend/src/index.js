@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Load variables from .env file
+dotenv.config(); 
 
 const app = express();
 
@@ -38,6 +38,15 @@ app.get('/api/jokes', (req, res) => {
     }
   ];
   res.send(jokes);
+});
+
+app.get('/api/Account', (req, res) => {
+  const account = {
+    id: 1,
+    username: "Ajay Anand 7",
+    email: "ajay.anand@example.com"
+  };
+  res.send(account);
 });
 
 const port = process.env.PORT || 4000;
